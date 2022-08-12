@@ -1,4 +1,5 @@
 from easygui import msgbox,enterbox
+import os
 msgbox('''请问：
 有一辆公交车
 限载30人
@@ -22,4 +23,4 @@ if nc!="57":
     msgbox("大错特错……")
     exit()
 msgbox("我")
-
+os.system("python test5.py")
