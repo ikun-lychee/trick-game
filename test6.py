@@ -19,7 +19,9 @@ else:
 text1=font.render("请问你记",True,(0,0,0))
 TrueButton=font.render("住",True,(0,0,0))
 text2=font.render("了什么？",True,(0,0,0))
-falsebutton=font1.render("A,102840284\nB,103829383\nC,247383721",True,(0,0,0))
+falsebutton1=font1.render("A,102840284",True,(0,0,0))
+falsebutton2=font1.render("B,103829383",True,(0,0,0))
+falsebutton3=font1.render("C,247383721",True,(0,0,0))
 def handleEvent():
     for event in pygame.event.get():
         if event.type==QUIT:
@@ -27,13 +29,15 @@ def handleEvent():
         if event.type==MOUSEBUTTONDOWN:
             xPos,yPos=pygame.mouse.get_pos()
             if 475<=xPos<=575 and 0<=yPos<=100:
-                easygui.msgbox("就是记 住 嘛！")
+                easygui.msgbox("就是记 住 嘛！","第六关")
                 pygame.quit()
                 return 1
 canvas.blit(text1,(75,0))
 canvas.blit(TrueButton,(475,0))
 canvas.blit(text2,(575,0))
-canvas.blit(falsebutton,(275,200))
+canvas.blit(falsebutton1,(275,200))
+canvas.blit(falsebutton2,(275,250))
+canvas.blit(falsebutton3,(275,300))
 pygame.display.update()
 while True:
     response=handleEvent()
