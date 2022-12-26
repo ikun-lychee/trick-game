@@ -17,11 +17,9 @@ def handleEvent():
     for event in pygame.event.get():
         if event.type==QUIT:
             easygui.msgbox("hhh你傻")
-        elif event.type==MOUSEBUTTONDOWN:
-            mouseX,mouseY=pygame.mouse.get_pos()
-            if 450<=mouseX<=550 and 275<=mouseY<=325:
-                pygame.quit()
-                return "QUIT"
+        elif event.type == WINDOWMINIMIZED:
+            pygame.quit()
+            return "QUIT"
 canvas.blit(text,(350,275))
 pygame.display.update()
 while True:
