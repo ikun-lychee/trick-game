@@ -4,7 +4,7 @@ setup(
     name='trick-game',
     version='0.2',
     packages=[''],
-    url='https://github.com/ikun-lychee/trick-game-I.git',
+    url='https://github.com/ikun-lychee/trick-game.git',
     license='',
     author='张杰',
     author_email='',
