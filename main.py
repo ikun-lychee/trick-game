@@ -17,7 +17,6 @@ else:
     font2=pygame.font.SysFont("Arial Unicode MS",20)
 text=font.render("史上最坑人的游戏",True,(0,0,0))
 start=font1.render("开始游戏",True,(0,0,0))
-noMouseTip=font2.render("没鼠标的先把鼠标买了再说！",True,(0,0,0))
 def handleEvent():
     for event in pygame.event.get():
         if event.type==QUIT:
@@ -32,7 +31,6 @@ def handleEvent():
             easygui.msgbox("这不是开始按钮")
 canvas.blit(text,(100,100))
 canvas.blit(start,(400,400))
-canvas.blit(noMouseTip,(370,580))
 pygame.display.update()
 while True:
     event=handleEvent()
